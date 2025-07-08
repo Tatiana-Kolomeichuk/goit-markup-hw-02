@@ -1,0 +1,79 @@
+/* 🌈 C11. Кольори */
+:root {
+    --color-primary: #2196F3;
+    --color-secondary: #212121;
+    --color-accent: #00BCD4;
+    --color-light: #F5F5F5;
+    --color-dark: #000000;
+}
+
+/* 🔄 C2, C14. Скидання базових стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🧍 C5, C6, C7, C8. Стилі для <body> */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-secondary);
+    background-color: var(--color-light);
+    line-height: 1.6;
+    /* C10: множник */
+}
+
+/* 📋 C1, C14. Списки без маркерів */
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* 🔗 C1, C3, C4. Посилання */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-primary);
+    /* C3, C4 */
+}
+
+/* 🔘 C1, C3, C13. Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+    /* C12 */
+    font-size: 16px;
+    /* C9 */
+    line-height: 1.5;
+    /* C10 */
+    cursor: pointer;
+    /* C13 */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--color-accent);
+    /* C3 */
+}
+
+/* 📞 C4. Контактний текст у хедері */
+.header-contact a {
+    transition: color 0.3s ease;
+}
+
+.header-contact a:hover,
+.header-contact a:focus {
+    color: var(--color-primary);
+}
