@@ -26,11 +26,14 @@ body {
 
 ul {
     list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: var(--color-text-main);
+    transition: color 0.3s ease;
 }
 
 a:hover,
@@ -50,7 +53,7 @@ a:focus {
 }
 
 .studio {
-    color: #2e2f42;
+    color: var(--color-primary);
 }
 
 /* === Navigation === */
@@ -63,25 +66,27 @@ a:focus {
 }
 
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.current {
     color: var(--color-hover);
 }
 
 /* === Header Contact === */
+.header-contact {
+    font-style: normal;
+}
+
 .contact-link {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-text-main);
+    transition: color 0.3s ease;
 }
 
 .contact-link:hover,
 .contact-link:focus {
     color: var(--color-hover);
-}
-
-address {
-    font-style: normal;
 }
 
 /* === Hero Section === */
@@ -96,6 +101,8 @@ address {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--color-white);
+    max-width: 496px;
+    margin: 0 auto 48px;
 }
 
 .btn {
@@ -110,7 +117,6 @@ address {
     border: none;
     padding: 16px 32px;
     border-radius: 4px;
-    margin-top: 24px;
     transition: background-color 0.3s ease;
 }
 
@@ -119,7 +125,7 @@ address {
     background-color: var(--color-hover);
 }
 
-/* === Section Titles === */
+/* === Section === */
 .section {
     padding: 120px 0;
 }
@@ -131,15 +137,22 @@ address {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--color-primary);
+    margin-bottom: 72px;
 }
 
-/* === Feature Items === */
+/* === Features === */
+.features-list {
+    display: flex;
+    gap: 24px;
+}
+
 .feature-item-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--color-primary);
+    margin-bottom: 8px;
 }
 
 .feature-item-text {
@@ -152,6 +165,20 @@ address {
 /* === Cards (Team, Portfolio) === */
 .card {
     background-color: var(--color-white);
+    text-align: center;
+    padding: 32px 16px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.team-list,
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
 }
 
 /* === Footer === */
@@ -167,4 +194,5 @@ address {
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 300px;
-    margin: 0 auto; }
+    margin: 0 auto;
+}
