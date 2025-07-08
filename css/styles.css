@@ -1,79 +1,126 @@
-/* 🌈 C11. Кольори */
 :root {
-    --color-primary: #2196F3;
-    --color-secondary: #212121;
-    --color-accent: #00BCD4;
-    --color-light: #F5F5F5;
-    --color-dark: #000000;
+    --color-primary: #2e2f42;
+    --color-accent: #4D5AE5;
+    --color-light: #f4f4fd;
+    --color-text: #434455;
+    --color-white: #ffffff;
+    --color-hover: #404bbf;
 }
 
-/* 🔄 C2, C14. Скидання базових стилів */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* 🧍 C5, C6, C7, C8. Стилі для <body> */
 body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--color-secondary);
-    background-color: var(--color-light);
-    line-height: 1.6;
-    /* C10: множник */
+    font-family: "Roboto", sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-white);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin: 0;
 }
 
-/* 📋 C1, C14. Списки без маркерів */
-ul,
-ol {
-    list-style: none;
-    padding-left: 0;
-}
-
-/* 🔗 C1, C3, C4. Посилання */
 a {
     text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
+    color: var(--color-text);
 }
 
 a:hover,
 a:focus {
-    color: var(--color-primary);
-    /* C3, C4 */
+    color: var(--color-hover);
 }
 
-/* 🔘 C1, C3, C13. Кнопки */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--color-primary);
-    color: #fff;
-    font-weight: 700;
-    /* C12 */
-    font-size: 16px;
-    /* C9 */
-    line-height: 1.5;
-    /* C10 */
-    cursor: pointer;
-    /* C13 */
-    transition: background-color 0.3s ease;
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
-.btn:hover,
-.btn:focus {
-    background-color: var(--color-accent);
-    /* C3 */
-}
-
-/* 📞 C4. Контактний текст у хедері */
+/* Header */
 .header-contact a {
-    transition: color 0.3s ease;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
 }
 
 .header-contact a:hover,
 .header-contact a:focus {
+    color: var(--color-hover);
+}
+
+/* Logo */
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: var(--color-white);
+}
+
+.btn {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 4px;
+    margin-top: 24px;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--color-hover);
+}
+
+/* Sections */
+.section {
+    padding: 120px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
     color: var(--color-primary);
+}
+
+/* Feature blocks */
+.feature-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-primary);
+}
+
+.feature-item-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
+}
+
+/* Team & Portfolio card */
+.card {
+    background-color: var(--color-white);
 }
