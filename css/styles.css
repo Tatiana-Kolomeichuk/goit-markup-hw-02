@@ -1,25 +1,36 @@
+/* === Global Variables === */
 :root {
     --color-primary: #2e2f42;
-    --color-accent: #4D5AE5;
-    --color-light: #f4f4fd;
-    --color-text: #434455;
-    --color-white: #ffffff;
+    --color-accent: #4d5ae5;
     --color-hover: #404bbf;
+    --color-bg-light: #f4f4fd;
+    --color-text-main: #434455;
+    --color-white: #ffffff;
+}
+
+/* === Base Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Roboto", sans-serif;
-    color: var(--color-text);
+    color: var(--color-text-main);
     background-color: var(--color-white);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin: 0;
+}
+
+ul {
+    list-style: none;
 }
 
 a {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-text-main);
 }
 
 a:hover,
@@ -27,26 +38,7 @@ a:focus {
     color: var(--color-hover);
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-/* Header */
-.header-contact a {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--color-text);
-}
-
-.header-contact a:hover,
-.header-contact a:focus {
-    color: var(--color-hover);
-}
-
-/* Logo */
+/* === Logo === */
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -57,7 +49,42 @@ ul {
     color: var(--color-accent);
 }
 
-/* Hero Section */
+.studio {
+    color: #2e2f42;
+}
+
+/* === Navigation === */
+.nav-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--color-hover);
+}
+
+/* === Header Contact === */
+.contact-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-text-main);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--color-hover);
+}
+
+address {
+    font-style: normal;
+}
+
+/* === Hero Section === */
 .hero {
     background-color: var(--color-primary);
     text-align: center;
@@ -72,6 +99,7 @@ ul {
 }
 
 .btn {
+    font-family: "Roboto", sans-serif;
     background-color: var(--color-accent);
     color: var(--color-white);
     font-size: 16px;
@@ -83,6 +111,7 @@ ul {
     padding: 16px 32px;
     border-radius: 4px;
     margin-top: 24px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover,
@@ -90,7 +119,7 @@ ul {
     background-color: var(--color-hover);
 }
 
-/* Sections */
+/* === Section Titles === */
 .section {
     padding: 120px 0;
 }
@@ -104,7 +133,7 @@ ul {
     color: var(--color-primary);
 }
 
-/* Feature blocks */
+/* === Feature Items === */
 .feature-item-title {
     font-weight: 500;
     font-size: 20px;
@@ -117,10 +146,25 @@ ul {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--color-text);
+    color: var(--color-text-main);
 }
 
-/* Team & Portfolio card */
+/* === Cards (Team, Portfolio) === */
 .card {
     background-color: var(--color-white);
 }
+
+/* === Footer === */
+.footer {
+    background-color: var(--color-primary);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.footer-text {
+    color: var(--color-bg-light);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    max-width: 300px;
+    margin: 0 auto; }
